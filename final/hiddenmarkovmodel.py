@@ -97,6 +97,7 @@ class Hmm(object):
         sum_prob = 0.0
         for t in range(0, len(sequence)): # 0, 1, ... l-1 step
             g.append({})
+            sum_prob = 0.0
             for state in self._statelist:
                 g[t][state] = a[t][state] * b[t][state]
                 sum_prob += g[t][state]    
